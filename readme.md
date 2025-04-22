@@ -3,5 +3,5 @@
 -  After trying several services, we decided on Google Cloud Platform (GCP). They offer $300 in free credits for first time users, and allows GPU access upon request.
 -  This READme will document the deployment process, for others to follow along with in the future.
 ## GCP Setup
-![GCP Settings](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![GCP Settings](https://github.com/kyl3h3arn/LivePortrait/blob/main/Screenshot%201.png)
 ## Deployment
