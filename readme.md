@@ -5,7 +5,8 @@
 ## GCP Setup
 ![GCP Settings](https://github.com/kyl3h3arn/LivePortrait/blob/main/Screenshot%201.png)
 ## Deployment
-> Make sure your system has [`git`](https://git-scm.com/), [`conda`](https://anaconda.org/anaconda/conda), and [`FFmpeg`](https://ffmpeg.org/download.html) installed. For details on FFmpeg installation, see [**how to install FFmpeg**](assets/docs/how-to-install-ffmpeg.md).
+> Make sure your system has [`git`](https://git-scm.com/), [`conda`](https://anaconda.org/anaconda/conda), and [`FFmpeg`](https://ffmpeg.org/download.html) installed. For details on FFmpeg installation, see [**how to install FFmpeg**](assets/docs/how-to-install-ffmpeg.md). </br>
+> Use the GCP command prompt to run the following:
 
 ```bash
 git clone https://github.com/KwaiVGI/LivePortrait
@@ -49,7 +50,7 @@ The [X-Pose](https://github.com/IDEA-Research/X-Pose) dependency does not suppor
 pip install -r requirements_macOS.txt
 ```
 
-### 2. Download pretrained weights 📥
+### Download pretrained weights 📥
 
 The easiest way to download the pretrained weights is from HuggingFace:
 ```bash
@@ -68,9 +69,7 @@ Alternatively, you can download all pretrained weights from [Google Drive](https
 
 Ensuring the directory structure is as or contains [**this**](assets/docs/directory-structure.md).
 
-### 4. Gradio interface 🤗
-
-We also provide a Gradio <a href='https://github.com/gradio-app/gradio'><img src='https://img.shields.io/github/stars/gradio-app/gradio'></a> interface for a better experience, just run by:
+### Gradio interface 🤗
 
 ```bash
 # For Linux and Windows users (and macOS with Intel??)
@@ -80,18 +79,6 @@ python app.py # humans mode
 PYTORCH_ENABLE_MPS_FALLBACK=1 python app.py # humans mode
 ```
 
-We also provide a Gradio interface of animals mode, which is only tested on Linux with NVIDIA GPU:
-```bash
-python app_animals.py # animals mode 🐱🐶
-```
-
 You can specify the `--server_port`, `--share`, `--server_name` arguments to satisfy your needs!
-
-🚀 We also provide an acceleration option `--flag_do_torch_compile`. The first-time inference triggers an optimization process (about one minute), making subsequent inferences 20-30% faster. Performance gains may vary with different CUDA versions.
-```bash
-# enable torch.compile for faster inference
-python app.py --flag_do_torch_compile
-```
-**Note**: This method is not supported on Windows and macOS.
 
 **Or, try it out effortlessly on [HuggingFace](https://huggingface.co/spaces/KwaiVGI/LivePortrait) 🤗**
